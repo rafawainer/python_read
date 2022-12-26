@@ -11,7 +11,7 @@ def leitura():
         arquivo_saida = open("arquivo_saida.txt", "w", encoding='utf-8')
 
         for registro in dados:
-            dados_saida = registro['nome'] + " tem " + registro['idade'] + " anos e mora na cidade de "+ registro['cidade']
+            dados_saida = registro['nome'] + " tem " + registro['idade'] + " anos e mora na cidade de " + registro['cidade']
 
             arquivo_saida.write(dados_saida)
             quantidade_saida += 1
