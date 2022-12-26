@@ -1,17 +1,13 @@
 import time
 import boto3
 
-def leitura():
-
-    AWS_ACCESS_KEY = "AWS_ACCESS_KEY"
-    AWS_SECRET_KEY = "AWS_SECRET_KEY"
-    AWS_REGION = "us-east-1"
+def leitura(aws_access_key_id, aws_secret_access_key, region_name):
 
     athena_client = boto3.client(
         "athena",
-        aws_access_key_id=AWS_ACCESS_KEY,
-        aws_secret_access_key=AWS_SECRET_KEY,
-        region_name=AWS_REGION
+        aws_access_key_id=aws_access_key_id,
+        aws_secret_access_key=aws_secret_access_key,
+        region_name=region_name
     )
 
     query_response = athena_client.start_query_execution(
