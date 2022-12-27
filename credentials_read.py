@@ -6,7 +6,7 @@ def read_credentials():
     aws_secret_access_key = []
     region_name = []
 
-    with open("aws_credentials.json", encoding='utf-8') as credentials_json:
+    with open("files/aws_credentials.json", encoding='utf-8') as credentials_json:
         dados = json.load(credentials_json)
 
         indice = 0

@@ -8,7 +8,7 @@ def leitura():
     with open("clientes_credores.json", encoding='utf-8') as arquivo_json:
         dados = json.load(arquivo_json)
 
-        arquivo_saida = open("arquivo_saida.txt", "w", encoding='utf-8')
+        arquivo_saida = open("files/arquivo_saida.txt", "w", encoding='utf-8')
 
         for registro in dados:
             dados_saida = registro['nome'] + " tem " + registro['idade'] + " anos e mora na cidade de " + registro['cidade']
